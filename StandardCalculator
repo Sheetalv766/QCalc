@@ -1,0 +1,66 @@
+package com.crio.qcalc;
+
+public class StandardCalculator {
+
+    public static void getVersion(){
+        System.out.println("Standard Calculator 1.0");
+    }
+
+    //private result variable
+    private int result;
+
+    //this is for addition 
+    public void add(int num1, int num2)
+    {
+        //store the value of the operation in this result variable
+        int result = num1 + num2; 
+        setResult(result);
+    }
+
+    //this is for subtraction
+    public void subtract(int num1, int num2)
+    {
+       int result = num1 - num2;
+        setResult(result);
+    }
+
+    //this is for multiplication
+    public void multiply(int num1, int num2)
+    {
+        int result = num1 * num2;
+        setResult(result);
+    }
+
+    //this is for division
+    public void divide(int num1, int num2)
+    {
+        int result = num1/num2;
+        setResult(result);
+    }
+
+    //getter for that result variable
+    public int getResult()
+    {
+        return result;
+    }
+
+    //setters
+    public void setResult(int value)
+    {
+        this.result = value;
+    }
+
+    //to be able to set the value of result to zero
+    public void clearResult()
+    {
+        //sets the value to 0
+        result = 0;
+    }
+
+    //helper method --> print current value of a result using getter
+    // able to print the result usint printResult()method
+    public void printResult()
+    {
+        System.out.println("Standard Calculator Result :" + getResult());
+    }
+}
